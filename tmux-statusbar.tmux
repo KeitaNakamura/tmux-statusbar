@@ -18,7 +18,7 @@ tmux set-option -g status-justify centre
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-if sysctl hw.model | grep 'Book' >/dev/null; then
+if sysctl hw.model | grep -e 'Book' -e 'Mac4' >/dev/null; then
   tmux set-option -g status-right "#[fg=colour15]#($CURRENT_DIR/scripts/wifi -r -s)#[default]   #($CURRENT_DIR/scripts/battery -t -r)  %a %d %h %H:%M"
 else
   tmux set-option -g status-right "%a %d %h %H:%M"
