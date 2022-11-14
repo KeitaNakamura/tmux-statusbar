@@ -24,9 +24,4 @@ tmux set-window-option -g window-status-format "#[fg=white] #I #W "
 tmux set-window-option -g window-status-current-format "#[fg=black,bg=green,bold]  #I #W  "
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-if sysctl hw.model | grep -e 'Book' -e 'Mac14' >/dev/null; then
-  tmux set-option -g status-right "#($CURRENT_DIR/scripts/battery -t -r)   #[fg=colour11]#($CURRENT_DIR/scripts/wifi -r -s)    #[fg=black,bg=white,bold]  %a %d %h %H:%M  "
-else
-  tmux set-option -g status-right "#[fg=black,bg=white,bold]  %a %d %h %H:%M  "
-fi
+tmux set-option -g status-right "#($CURRENT_DIR/scripts/battery -t -r)   #[fg=colour11]#($CURRENT_DIR/scripts/wifi -r -s)    #[fg=black,bg=white,bold]  %a %d %h %H:%M  "
