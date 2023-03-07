@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-# background color for statusb bar
-tmux set -g status-bg '#172329'
+# background color for status bar
+tmux set -g status-bg '#1D2129' # aurora
+# tmux set -g status-bg '#172329' # neodark
 
 # set statusbar to the top
 tmux set-option -g status-position top
