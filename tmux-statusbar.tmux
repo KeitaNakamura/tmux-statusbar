@@ -21,4 +21,4 @@ tmux set-window-option -g window-status-format "#[fg=white] #I #W "
 tmux set-window-option -g window-status-current-format "#[fg=black,bg=green,bold]  #I #W  "
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-tmux set-option -g status-right "#($CURRENT_DIR/scripts/battery -t -r)   #[fg=brightyellow]#($CURRENT_DIR/scripts/wifi -r -s)    #[fg=black,bg=white,bold]  %a %h %d %H:%M  "
+tmux set-option -g status-right "#($CURRENT_DIR/scripts/battery -t -r)    #[fg=black,bg=white,bold]  %a %h %d %H:%M  "
